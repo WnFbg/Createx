@@ -1,3 +1,3 @@
 $(function () {
-  var mixed = mixitup(".directions__list");
+//   var mixed = mixitup(".directions__list");
 });
