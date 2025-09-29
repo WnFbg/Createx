@@ -10,6 +10,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js" defer></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <script src="js/mixitup.min.js" defer></script>
   <script src="js/main.js" defer></script>
   <title>Createx</title>
@@ -105,7 +108,7 @@
     </header>
 
     <main class="main">
-      <section class="about">
+      <section class="main__about about">
         <div class="container">
           <div class="about__inner">
             <div class="about__createx">
@@ -159,107 +162,252 @@
           </div>
         </div>
       </section>
-      <section class="directions">
+
+      <section class="main__directions directions">
         <div class="container">
           <div class="directions__inner">
-            <div class="directions__heading heading">
+            <div class="directions__heading heading heading--text-center">
               <p class="heading__subtitle">our main directions</p>
               <h2 class="heading__title">What do we teach</h2>
             </div>
             <div class="directions__body">
               <ul class="directions__filter-box">
                 <li class="directions__filter-item">
-                  <button class="directions__filter-btn directions__filter-btn--active" type="button"
+                  <button class="directions__filter-btn directions__filter-btn--active" type="button" data-filter="all"
                     data-filter="all">All</button>
                 </li>
                 <li class="directions__filter-item">
-                  <button class="directions__filter-btn" type="button">Marketing</button>
+                  <button class="directions__filter-btn" type="button"
+                    data-filter=".directions__list-item--marketing">Marketing</button>
                 </li>
                 <li class="directions__filter-item">
-                  <button class="directions__filter-btn" type="button">Management</button>
+                  <button class="directions__filter-btn" type="button"
+                    data-filter=".directions__list-item--managment">Management</button>
                 </li>
                 <li class="directions__filter-item">
-                  <button class="directions__filter-btn" type="button">HR &
+                  <button class="directions__filter-btn" type="button" data-filter=".directions__list-item--hr">HR &
                     Recruting</button>
                 </li>
                 <li class="directions__filter-item">
-                  <button class="directions__filter-btn" type="button">Design</button>
+                  <button class="directions__filter-btn" type="button"
+                    data-filter=".directions__list-item--design">Design</button>
                 </li>
                 <li class="directions__filter-item">
-                  <button class="directions__filter-btn" type="button">Development</button>
+                  <button class="directions__filter-btn" type="button"
+                    data-filter=".directions__list-item--development">Development</button>
                 </li>
               </ul>
               <ul class="directions__list">
-                <li class="directions__list-item">
-                  <a href="#" class="directions__list-link">
+                <li class="mix directions__list-item directions__list-item--marketing" data-order="1">
+                  <a class="directions__list-link" href="#">
                     <div class="directions__image-box">
-                      <img src="images/directions/1.jpg" alt="Image">
+                      <img src="images/directions/1.jpg" alt="">
                     </div>
                     <div class="directions__link-content">
                       <div class="directions__link-tag">Marketing</div>
-                      <p class="directions__link-text">Odio posuere netus quisque faucibus lectus arcu donec. Eget
-                        dictum
-                        eu viverra faucibus. Viverra scelerisque consequat.</p>
+                      <p class="directions__link-text">
+                        Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra
+                        scelerisque consequat.
+                      </p>
                       <div class="directions__link-btn">Check courses</div>
                     </div>
                   </a>
                 </li>
-                <li class="directions__list-item">
-                  <a href="#" class="directions__list-link directions__list-link--active">
+                <li class="mix directions__list-item directions__list-item--management" data-order="2">
+                  <a class="directions__list-link" href="#">
                     <div class="directions__image-box">
-                      <img src="images/directions/2.jpg" alt="Image">
-                      <div class="directions__link-content">
-                        <div class="directions__link-tag">Management</div>
-                        <p class="directions__link-text">Odio posuere netus quisque faucibus lectus arcu donec. Eget
-                          dictum
-                          eu viverra faucibus. Viverra scelerisque consequat.</p>
-                        <div class="directions__link-btn">Check courses</div>
-                      </div>
+                      <img src="images/directions/2.jpg" alt="">
+                    </div>
+                    <div class="directions__link-content">
+                      <div class="directions__link-tag">Management</div>
+                      <p class="directions__link-text">
+                        Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra
+                        scelerisque consequat.
+                      </p>
+                      <div class="directions__link-btn">Check courses</div>
+                    </div>
                   </a>
                 </li>
-                <li class="directions__list-item">
-                  <a href="#" class="directions__list-link directions__list-link--active">
+                <li class="mix directions__list-item directions__list-item--hr" data-order="3">
+                  <a class="directions__list-link" href="#">
                     <div class="directions__image-box">
-                      <img src="images/directions/3.jpg" alt="Image">
-                      <div class="directions__link-content">
-                        <div class="directions__link-tag">HR & Recruting</div>
-                        <p class="directions__link-text">Odio posuere netus quisque faucibus lectus arcu donec. Eget
-                          dictum
-                          eu viverra faucibus. Viverra scelerisque consequat.</p>
-                        <div class="directions__link-btn">Check courses</div>
-                      </div>
+                      <img src="images/directions/3.jpg" alt="">
+                    </div>
+                    <div class="directions__link-content">
+                      <div class="directions__link-tag">HR & Recruting</div>
+                      <p class="directions__link-text">
+                        Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra
+                        scelerisque consequat.
+                      </p>
+                      <div class="directions__link-btn">Check courses</div>
+                    </div>
                   </a>
                 </li>
-                <li class="directions__list-item">
-                  <a href="#" class="directions__list-link directions__list-link--active">
+                <li class="mix directions__list-item directions__list-item--design" data-order="4">
+                  <a class="directions__list-link" href="#">
                     <div class="directions__image-box">
-                      <img src="images/directions/4.jpg" alt="Image">
-                      <div class="directions__link-content">
-                        <div class="directions__link-tag">Design</div>
-                        <p class="directions__link-text">Odio posuere netus quisque faucibus lectus arcu donec. Eget
-                          dictum
-                          eu viverra faucibus. Viverra scelerisque consequat.</p>
-                        <div class="directions__link-btn">Check courses</div>
-                      </div>
+                      <img src="images/directions/4.jpg" alt="">
+                    </div>
+                    <div class="directions__link-content">
+                      <div class="directions__link-tag">Design</div>
+                      <p class="directions__link-text">
+                        Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra
+                        scelerisque consequat.
+                      </p>
+                      <div class="directions__link-btn">Check courses</div>
+                    </div>
                   </a>
                 </li>
-                <li class="directions__list-item">
-                  <a href="#" class="directions__list-link directions__list-link--active">
+                <li class="mix directions__list-item directions__list-item--development" data-order="5">
+                  <a class="directions__list-link" href="#">
                     <div class="directions__image-box">
-                      <img src="images/directions/5.jpg" alt="Image">
-                      <div class="directions__link-content">
-                        <div class="directions__link-tag">Development</div>
-                        <p class="directions__link-text">Odio posuere netus quisque faucibus lectus arcu donec. Eget
-                          dictum
-                          eu viverra faucibus. Viverra scelerisque consequat.</p>
-                        <div class="directions__link-btn">Check courses</div>
-                      </div>
+                      <img src="images/directions/5.jpg" alt="">
+                    </div>
+                    <div class="directions__link-content">
+                      <div class="directions__link-tag">Development</div>
+                      <p class="directions__link-text">
+                        Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra
+                        scelerisque consequat.
+                      </p>
+                      <div class="directions__link-btn">Check courses</div>
+                    </div>
                   </a>
                 </li>
-                <li class="directions__list-item directions__list-item--empty">
-                  New studying program coming soon...
+                <li class="mix directions__list-item directions__list-item--empty" data-order="6">
+                  <span>New studying program coming soon...</spa>
                 </li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main__cert cert">
+        <div class="container">
+          <div class="cert__inner">
+            <div class="cert__content">
+              <div class="cert__heading heading">
+                <p class="heading__subtitle">Createx Certificate</p>
+                <h2 class="heading__title">Your expertise will be confirmed</h2>
+              </div>
+              <p class="cert__text">
+                We are accredited by international professional organizations and institutes:
+              </p>
+              <ul class="cert__logos">
+                <li class="cert__logos-item">
+                  <img src="images/logos/1.svg" alt="">
+                </li>
+                <li class="cert__logos-item">
+                  <img src="images/logos/2.svg" alt="">
+                </li>
+                <li class="cert__logos-item">
+                  <img src="images/logos/3.svg" alt="">
+                </li>
+              </ul>
+            </div>
+            <div class="cert__image-box">
+              <img src="images/main-image/award.jpg" alt="Сертификат">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main__team team">
+        <div class="container">
+          <div class="team__inner">
+            <div class="team__heading heading">
+              <p class="heading__subtitle">Best tutors are all here</p>
+              <h2 class="heading__title">Meet our team</h2>
+            </div>
+            <div class="team__slider">
+              <div class="team__slide">
+                <div class="team__image-box">
+                  <div class="team__image">
+                    <img src="images/team/1.jpg" alt="Image">
+                  </div>
+                  <ul class="team__social">
+                    <li class="team__social-item">
+                      <a href="#" class="team__social-link"></a>
+                    </li>
+                    <li class="team__social-item">
+                      <a href="#" class="team__social-link"></a>
+                    </li>
+                    <li class="team__social-item">
+                      <a href="#" class="team__social-link"></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="team__info">
+                  <div class="team__info-name">Dianne Russell</div>
+                  <div class="team__info-position">Founder and CEO</div>
+                </div>
+              </div>
+              <div class="team__slide">
+                <div class="team__image-box">
+                  <div class="team__image">
+                    <img src="images/team/2.jpg" alt="Image">
+                  </div>
+                  <ul class="team__social">
+                    <li class="team__social-item">
+                      <a href="#" class="team__social-link"></a>
+                    </li>
+                    <li class="team__social-item">
+                      <a href="#" class="team__social-link"></a>
+                    </li>
+                    <li class="team__social-item">
+                      <a href="#" class="team__social-link"></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="team__info">
+                  <div class="team__info-name">Jerome Bell</div>
+                  <div class="team__info-position">Founder and Program Director</div>
+                </div>
+              </div>
+              <div class="team__slide">
+                <div class="team__image-box">
+                  <div class="team__image">
+                    <img src="images/team/3.jpg" alt="Image">
+                  </div>
+                  <ul class="team__social">
+                    <li class="team__social-item">
+                      <a href="#" class="team__social-link"></a>
+                    </li>
+                    <li class="team__social-item">
+                      <a href="#" class="team__social-link"></a>
+                    </li>
+                    <li class="team__social-item">
+                      <a href="#" class="team__social-link"></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="team__info">
+                  <div class="team__info-name">Kristin Watson</div>
+                  <div class="team__info-position">Marketer, Curator of Marketing Course</div>
+                </div>
+              </div>
+              <div class="team__slide">
+                <div class="team__image-box">
+                  <div class="team__image">
+                    <img src="images/team/4.jpg" alt="Image">
+                  </div>
+                  <ul class="team__social">
+                    <li class="team__social-item">
+                      <a href="#" class="team__social-link"></a>
+                    </li>
+                    <li class="team__social-item">
+                      <a href="#" class="team__social-link"></a>
+                    </li>
+                    <li class="team__social-item">
+                      <a href="#" class="team__social-link"></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="team__info">
+                  <div class="team__info-name">Marvin McKinney</div>
+                  <div class="team__info-position">PM, Curator of Management Course</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
