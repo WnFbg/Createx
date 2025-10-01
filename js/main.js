@@ -6,8 +6,19 @@ $(function () {
     $(this).addClass("directions__filter-btn--active");
   });
 
-  $('.team__slider').slick({
+  $(".team__slider").slick({
     arrows: false,
-    slidesToShow: 4
-  })
+    slidesToShow: 4,
+    infinity: true,
+    draggoble: false,
+    waitForAnimate: false
+  });
+  $(".team__slider-prev").on("click", function (e) {
+    e.preventDefault();
+    $(".team__slider").slick("slickPrev");
+  });
+  $(".team__slider-next").on("click", function (e) {
+    e.preventDefault();
+    $(".team__slider").slick("slickNext");
+  });
 });
