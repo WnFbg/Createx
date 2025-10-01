@@ -11,7 +11,7 @@ $(function () {
     slidesToShow: 4,
     infinity: true,
     draggoble: false,
-    waitForAnimate: false
+    waitForAnimate: false,
   });
   $(".team__slider-prev").on("click", function (e) {
     e.preventDefault();
@@ -20,5 +20,10 @@ $(function () {
   $(".team__slider-next").on("click", function (e) {
     e.preventDefault();
     $(".team__slider").slick("slickNext");
+  });
+
+  $(".testimonials__slider").slick({
+    arrows: false,
+    dots: true,
   });
 });
