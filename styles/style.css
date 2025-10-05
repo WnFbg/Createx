@@ -35,6 +35,10 @@ body {
     padding-bottom: 196px;
 }
 
+.main__companies {
+    padding-bottom: 153px;
+}
+
 .button {
     display: inline-block;
     font-weight: 700;
@@ -741,39 +745,71 @@ body {
     margin-right: 24px;
 }
 
-.container {}
-
 /* ------------------- Testimonials ------------------------ */
 
 .testimonials {
-    background: #f4f5f7
+    background: #F4F5F7;
+    position: relative;
 }
 
-.testimonials__inner {}
+.testimonials::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-44.9%, -55.4%);
+    background: url("../images/decor/testi-bg.svg") 0 0 / 100% no-repeat;
+    width: 1971px;
+    height: 816px;
+}
+
+.testimonials__inner {
+    position: relative;
+    z-index: 1;
+}
 
 .testimonials__heading {
     margin-bottom: 60px;
 }
 
-.testimonials__slider-wrapper {}
+.testimonials__slider-wrapper {
+    padding: 0 50px;
+    position: relative;
+    margin-bottom: 50px;
+}
 
-.testimonials__slider {}
+.testimonials__slider {
+    max-width: 1020px;
+    margin: 0 auto;
+}
 
 .testimonials__slide {
     padding: 64px;
-    background: #fff;
+    background-color: #fff;
+    border-radius: 4px;
 }
 
 .testimonials__slide-inner {
     max-width: 810px;
     margin: 0 auto;
+    padding-left: 58px;
 }
 
 .testimonials__quote {
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0%;
+    font-size: 20px;
+    line-height: 150%;
     margin-bottom: 24px;
+    position: relative;
+}
+
+.testimonials__quote::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -58px;
+    background: url("../images/icons/quote-icon.svg") 0 0 / 100% no-repeat;
+    width: 28px;
+    height: 20px;
 }
 
 .testimonials__user {
@@ -790,14 +826,160 @@ body {
 .testimonials__info {}
 
 .testimonials__info-name {
-    color: #1e212c;
+    color: #1E212C;
     font-weight: 700;
     margin-bottom: 4px;
-    line-height: 19px;
 }
 
 .testimonials__info-position {
-    font-weight: 400;
-    line-height: 17px;
-    color: #787a80
+    font-size: 14px;
+    line-height: 150%;
+    color: #787A80;
+}
+
+.testimonials__arrow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    z-index: 5;
+}
+
+.testimonials__arrow path {
+    transition: all .3s;
+}
+
+.testimonials__arrow::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 48px;
+    height: 48px;
+    background-color: #FF3F3A;
+    border-radius: 50%;
+    z-index: -1;
+    transition: all .3s;
+}
+
+.testimonials__prev {
+    left: 0;
+}
+
+.testimonials__prev::before {
+    transform: translate(-50%, -50%) scale(0);
+    left: 22%;
+}
+
+.testimonials__next {
+    right: 0;
+    justify-content: flex-end;
+}
+
+.testimonials__next::before {
+    transform: translate(50%, -50%) scale(0);
+    right: 22%;
+}
+
+.testimonials__arrow:hover path {
+    fill: #fff;
+}
+
+.testimonials__prev:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+
+
+}
+
+.testimonials__next:hover::before {
+    transform: translate(50%, -50%) scale(1);
+}
+
+.testimonials__dots .slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonials__dots li {
+    margin-right: 12px;
+}
+
+.testimonials__dots li:last-child {
+    margin-right: 0;
+}
+
+.testimonials__dots button {
+    font-size: 0;
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.testimonials__dots button::before {
+    content: "";
+    height: 3px;
+    width: 100%;
+    background-color: #B3B7BC;
+    border-radius: 3px;
+}
+
+.testimonials__dots .slick-active button::before {
+    background-color: #424551;
+    transition: all .3s;
+}
+
+/* ------------------------------- Companies ----------------------------------- */
+
+.companies {
+    background: #f4f5f7;
+}
+
+.companies__inner {
+    position: relative;
+}
+
+
+.companies__inner::before {
+    content: "";
+    position: absolute;
+    left: -230px;
+    left: -120px;
+    background-color: url(../images/decor/5.svg) 0 0 / 100% no-repeat;
+    width: 90px;
+    height: 90px;
+}
+
+.companies__heading {
+    margin-bottom: 60px;
+}
+
+.companies__grid {
+    display: grid;
+    grid-template: repeat(2, auto) / repeat(6, 1fr);
+    gap: 40px 100px;
+}
+
+.companies__grid-item {}
+
+.companies__grid-link {
+    display: block;
+}
+
+.companies__grid-link img {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(1);
+    opacity: .4;
+    transition: all 1.3s;
+}
+
+.companies__grid-link:hover img {
+    opacity: 1;
+    filter: grayscale(0);
+    transition: all .3s;
 }
