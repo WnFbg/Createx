@@ -100,8 +100,6 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.logo {}
-
 .heading {
     color: #1E212C;
 }
@@ -134,8 +132,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-
-.header__top {}
 
 .header__top-inner {
     display: flex;
@@ -272,8 +268,6 @@ body {
     margin-right: 0px;
 }
 
-.header__img {}
-
 .header__row {
     display: flex;
     justify-content: space-between;
@@ -304,10 +298,6 @@ body {
 
 /* ============================== ABOUT ============================== */
 /* ============================== ABOUT ============================== */
-
-.about {}
-
-.about__inner {}
 
 .about__createx {
     display: flex;
@@ -366,8 +356,6 @@ body {
 .about__btn:last-child {
     margin-right: 0;
 }
-
-.about__img {}
 
 .about__values {
     display: flex;
@@ -444,8 +432,6 @@ body {
     margin-bottom: 90px;
 }
 
-.directions__body {}
-
 .directions__filter-box {
     display: flex;
     flex-wrap: wrap;
@@ -485,8 +471,6 @@ body {
     grid-template: repeat(2, auto) / repeat(3, 1fr);
     gap: 30px;
 }
-
-.directions__list-item {}
 
 .directions__list-item--empty {
     background: #F4F5F7;
@@ -590,8 +574,6 @@ body {
 /* ============================== CERTIFICATE ============================== */
 /* ============================== CERTIFICATE ============================== */
 
-.cert {}
-
 .cert__inner {
     display: flex;
     justify-content: space-between;
@@ -650,8 +632,6 @@ body {
 .team {
     background: url("../images/decor/team-bg.svg") calc(50% + 140px) calc(50% + -120px) no-repeat, #F4F5F7;
 }
-
-.team__inner {}
 
 .team__heading {
     margin-bottom: 60px;
@@ -791,7 +771,6 @@ body {
     margin-right: 24px;
 }
 
-.team__slider-next {}
 
 /* ============================== TESTIMONIALS ============================== */
 /* ============================== TESTIMONIALS ============================== */
@@ -872,7 +851,6 @@ body {
     margin-right: 20px;
 }
 
-.testimonials__info {}
 
 .testimonials__info-name {
     color: #1E212C;
@@ -1013,8 +991,6 @@ body {
     gap: 40px 8.1%;
 }
 
-.companies__grid-item {}
-
 .companies__grid-link {
     display: block;
 }
@@ -1036,8 +1012,6 @@ body {
 /* ============================== PROGRAM ============================== */
 /* ============================== PROGRAM ============================== */
 
-.program {}
-
 .program__inner {
     display: flex;
     justify-content: space-between;
@@ -1052,8 +1026,6 @@ body {
 .program__heading {
     margin-bottom: 60px;
 }
-
-.program__acc {}
 
 .program__acc-item {
     margin-bottom: 24px;
@@ -1118,10 +1090,6 @@ body {
 /* ============================== BLOG ============================== */
 /* ============================== BLOG ============================== */
 
-.blog {}
-
-.blog__inner {}
-
 .blog__top {
     display: flex;
     justify-content: space-between;
@@ -1132,8 +1100,6 @@ body {
 .blog__heading {
     margin-right: 30px;
 }
-
-.blog__btn {}
 
 .blog__row {
     display: flex;
@@ -1319,8 +1285,6 @@ body {
 /* ============================== INFO ============================== */
 /* ============================== INFO ============================== */
 
-.info {}
-
 .info__inner {
     display: flex;
     align-items: flex-end;
@@ -1392,8 +1356,6 @@ body {
     line-height: 150%;
 }
 
-.info__follow {}
-
 .info__follow-head {
     font-weight: 700;
     line-height: 150%;
@@ -1434,8 +1396,6 @@ body {
 /* ============================== QUESTIONS ============================== */
 /* ============================== QUESTIONS ============================== */
 
-.questions {}
-
 .questions__inner {
     display: flex;
     align-items: center;
@@ -1458,8 +1418,6 @@ body {
 .questions__heading {
     margin-bottom: 40px;
 }
-
-.questions__form {}
 
 .questions__form-row {
     display: flex;
@@ -1624,8 +1582,6 @@ body {
     white-space: normal;
 }
 
-.footer__top-list {}
-
 .footer__top-item {
     margin-bottom: 8px;
 }
@@ -1649,8 +1605,6 @@ body {
 .footer__item-link:hover {
     opacity: 1;
 }
-
-.footer__form {}
 
 .footer__form-items {
     background: #ffffff1f;
